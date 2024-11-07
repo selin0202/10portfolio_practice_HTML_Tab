@@ -1,0 +1,133 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  line-height: 1.6em;
+  background-color: #f4f4f4;
+  font-weight: 300;
+}
+.tab-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.heading {
+  margin-left: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.heading h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.heading h1 span {
+  color: crimson;
+}
+
+/* Search */
+.heading input[type=text] {
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  padding-left: 50px;
+  background: #fff url(images/search-icon.svg) no-repeat center left 10px;
+  background-size: 23px;
+}
+.heading input[type=text]::placeholder {
+  font-style: italic;
+  color: #999;
+  transition: 0.3s;
+}
+.heading input[type=text]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Tab Button */
+.tab-btn {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.tab-btn li {
+  float: left;
+  width: 120px;
+  text-align: center;
+  padding: 7px;
+  background-color: #eee;
+  border-right: 1px solid #ddd;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+}
+.tab-btn li:hover,
+.tab-btn li.active {
+  background-color: #fff;
+  border-top: 2px solid crimson;
+}
+.tab-btn li:last-child {
+  border-right: none;
+  width: 170px;
+}
+.tabs {
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fff;
+  padding: 40px;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+.tab h2 {
+  font-size: 26px;
+  text-align: center;
+}
+.tab img {
+  float: left;
+  margin-right: 20px;
+}
+.tab p {
+  overflow: hidden;
+}
+.btn_X {
+  position: fixed;
+  top: 20px;
+  right: 4%;
+  border-radius: 50px;
+  border: 1px solid #4d4d4d73;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.btn_X:after,
+.btn_X:before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #4d4d4d73;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.btn_X:after {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn_X:before {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
